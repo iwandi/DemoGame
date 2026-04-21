@@ -333,7 +333,7 @@ void UUISubsystem::SetMenuState(EMenuType menu)
 	ActivateContext(entry.MenuContext, entry.IsRootMenu);
 
 	LastKnownMenu = entry.MenuType;
-	CurrentContext = entry.MenuContext;
+	CurrentContext = context;
 	
 	//UWidgetBlueprintLibrary::SetUserFocus(GetPlayerController(), widget);
 }
