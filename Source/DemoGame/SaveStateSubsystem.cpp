@@ -104,11 +104,14 @@ void USaveStateSubsystem::ApplySaveGame(UDemoGameSaveGame* saveGame)
 	}
 
 	if (GameLivecycleSubsystem->GetIsGamePlayWorldReady())
+	{
 		ApplyReSpawn(saveGame);
+		bInSync = true;
+	}
 	else 
+		// TODO : add a away to be known in sync to set bInSync on a late load
 		worldReadyReSpawn = true;
 
-	bInSync;
 }
 
 void USaveStateSubsystem::ApplyReSpawn(UDemoGameSaveGame* saveGame)
@@ -147,7 +150,7 @@ void USaveStateSubsystem::LoadNewGame()
 
 bool USaveStateSubsystem::IsSaveRequired() const
 {
-	if (!bInSync)
+	if (bInSync)
 		return false;
 
 	for (auto& handler : RegisteredHandlers)

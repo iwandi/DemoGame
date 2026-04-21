@@ -10,7 +10,7 @@
  *  Simple GameMode for a third person game
  */
 UCLASS(abstract)
-class ADemoGameGameMode : public AGameModeBase
+class DEMOGAME_API  ADemoGameGameMode : public AGameModeBase
 {
 	GENERATED_BODY()
 public:

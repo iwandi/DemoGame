@@ -59,6 +59,9 @@ void UUISubsystem::RestoreRootUI(ULocalPlayer* localPlayer, TSubclassOf<UUserWid
 			restoreEntry = true;
 		}
 
+		// TODO : This may jsut be stright up wrong. 
+		// i wantet to remove the widget from its container. This looks not liek the call
+		// keeping this for now as it dose not couse a major issue
 		RootUI->RemoveFromRoot();
 		RootUI = nullptr;
 	}

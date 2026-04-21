@@ -14,5 +14,5 @@ class DEMOGAME_API UCollectableActorComponent : public UActorComponent
 
 public:	
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Collectable")
-	int32 Value;	
+	int32 Value = 1;	
 };

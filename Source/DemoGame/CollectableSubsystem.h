@@ -16,7 +16,7 @@ class UGameLivecycleSubsystem;
 UCLASS()
 class DEMOGAME_API UCollectableSubsystem : public UGameInstanceSubsystem, public ISaveStateHandler
 {
-	const int64 TargetValue = 100.f;
+	const int64 TargetValue = 100;
 
 	GENERATED_BODY()
 
@@ -27,7 +27,7 @@ class DEMOGAME_API UCollectableSubsystem : public UGameInstanceSubsystem, public
 	UPROPERTY()
 	TObjectPtr<UBindableData> Bindable;
 
-	int64 TotalCollected = 0.f;
+	int64 TotalCollected = 0;
 
 	void Initialize(FSubsystemCollectionBase& Collection) override;
 public :

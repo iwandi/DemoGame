@@ -31,6 +31,7 @@ void UGameLivecycleSubsystem::LateInit()
 	auto player = GetWorld()->GetFirstLocalPlayerFromController();
 
 	UISubsystem = player->GetSubsystem<UUISubsystem>();
+	PopupSubsystem = player->GetSubsystem<UPopupSubsystem>();
 }
 
 void UGameLivecycleSubsystem::Start()

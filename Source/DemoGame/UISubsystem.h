@@ -37,7 +37,7 @@ public:
  * 
  */
 UCLASS()
-class UUISubsystem : public ULocalPlayerSubsystem
+class DEMOGAME_API UUISubsystem : public ULocalPlayerSubsystem
 {
 	GENERATED_BODY()
 	
